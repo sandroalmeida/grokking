@@ -1,4 +1,4 @@
-package dev.sandroalmeida;
+package dev.sandroalmeida.slidingWindow;
 
 public class MaxSumSubArrayOfSizeK {
 
