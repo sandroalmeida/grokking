@@ -3,11 +3,11 @@ package dev.sandroalmeida;
 public class MaxSumSubArrayOfSizeK {
 
     public static int findMaxsumSubArray(int k, int[] arr){
-        int start = 0, end, sum = 0, sumMax = 0;
-        for(end = 0; end <= arr.length - 1; end++){
+        int start = 0, sum = 0, sumMax = 0;
+        for(int end = 0; end <= arr.length - 1; end++){
             sum += arr[end];
-            if(sum > sumMax) sumMax = sum;
             if(end >= k - 1){
+                sumMax = Math.max(sum, sumMax);
                 sum -= arr[start];
                 start++;
             }
