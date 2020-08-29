@@ -26,8 +26,8 @@ public class StringPermutation_V2 {
             if(matched == charMap.size())
                 return true;
 
-            if(end > pattern.length()){
-                char leftChar = str.charAt(start);
+            if(end >= pattern.length() - 1){
+                char leftChar = str.charAt(start++);
                 if(charMap.containsKey(leftChar)){
                     if(charMap.get(leftChar) == 0)
                         matched--;
@@ -39,10 +39,10 @@ public class StringPermutation_V2 {
     }
 
     public static void main(String[] args) {
-        System.out.println("Permutation exist: " + StringPermutation.findPermutation("oidbcaf", "abc"));
-        System.out.println("Permutation exist: " + StringPermutation.findPermutation("odicf", "dc"));
-        System.out.println("Permutation exist: " + StringPermutation.findPermutation("bcdxabcdy", "bcdyabcdx"));
-        System.out.println("Permutation exist: " + StringPermutation.findPermutation("aaacb", "abc"));
+//        System.out.println("Permutation exist: " + StringPermutation_V2.findPermutation("oidbcaf", "abc"));
+//        System.out.println("Permutation exist: " + StringPermutation_V2.findPermutation("odicf", "dc"));
+//        System.out.println("Permutation exist: " + StringPermutation_V2.findPermutation("bcdxabcdy", "bcdyabcdx"));
+        System.out.println("Permutation exist: " + StringPermutation_V2.findPermutation("aaacb", "abc"));
     }
 
 }
