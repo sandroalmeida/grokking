@@ -1,4 +1,4 @@
-package dev.sandroalmeida;
+package dev.sandroalmeida.twoHeaps;
 
 import java.util.LinkedList;
 import java.util.List;
