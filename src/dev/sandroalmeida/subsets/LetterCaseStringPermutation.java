@@ -12,11 +12,11 @@ public class LetterCaseStringPermutation {
         permutations.add(str);
 
         for(int i = 0; i < str.length(); i++){
-            int n = permutations.size();
-            for(int j = 0; j < n; j++){
-                String currentPermutation = permutations.get(j);
-                String currentChar = currentPermutation.substring(i,i+1);
-                if(Character.isLetter(currentChar.charAt(0))){
+            String currentChar = str.substring(i,i+1);
+            if(Character.isLetter(currentChar.charAt(0))){
+                int n = permutations.size();
+                for(int j = 0; j < n; j++){
+                    String currentPermutation = permutations.get(j);
                     String firstPart = currentPermutation.substring(0,i);
                     String secondPart = currentPermutation.substring(i+1);
                     if(currentChar.equals(currentChar.toLowerCase())) {
