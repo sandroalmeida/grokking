@@ -31,7 +31,7 @@ public class TopologicalSort {
         while (!sources.isEmpty()) {
             int vertex = sources.poll();
             sortedOrder.add(vertex);
-            List<Integer> children = graph.get(vertex); // get the node's children to decrement their in-degrees
+            List<Integer> children = graph.get(vertex);
             for (int child : children) {
                 inDegree.put(child, inDegree.get(child) - 1);
                 if (inDegree.get(child) == 0)
@@ -39,7 +39,7 @@ public class TopologicalSort {
             }
         }
 
-        if (sortedOrder.size() != vertices) // topological sort is not possible as the graph has a cycle
+        if (sortedOrder.size() != vertices)
             return new ArrayList<>();
 
         return sortedOrder;
